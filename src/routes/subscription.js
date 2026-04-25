@@ -1,8 +1,26 @@
 const express = require('express');
+const crypto = require('crypto');
 const { requireAuth, supabase } = require('../middleware/auth');
 const { getUserPlan } = require('../middleware/subscription');
 
 const router = express.Router();
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+function timingSafeCompare(a, b) {
+  try {
+    const bufA = Buffer.from(String(a));
+    const bufB = Buffer.from(String(b));
+    if (bufA.length !== bufB.length) {
+      // Still run comparison to avoid timing leak
+      crypto.timingSafeEqual(bufA, bufA);
+      return false;
+    }
+    return crypto.timingSafeEqual(bufA, bufB);
+  } catch {
+    return false;
+  }
+}
 
 // GET /subscription/status
 router.get('/status', requireAuth, async (req, res, next) => {
@@ -23,26 +41,33 @@ router.get('/status', requireAuth, async (req, res, next) => {
   }
 });
 
-// POST /subscription/webhook  (RevenueCat webhook)
+// POST /subscription/webhook (RevenueCat)
 router.post('/webhook', async (req, res, next) => {
   try {
-    // Verify RevenueCat webhook authorization header
-    const authHeader = req.headers.authorization;
-    if (authHeader !== process.env.REVENUECAT_WEBHOOK_AUTH_HEADER) {
+    const authHeader = req.headers.authorization || '';
+    const expected = process.env.REVENUECAT_WEBHOOK_AUTH_HEADER || '';
+
+    // Timing-safe comparison prevents timing attacks
+    if (!timingSafeCompare(authHeader, expected)) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
     const event = req.body;
     const eventType = event?.event?.type;
-    const appUserId = event?.event?.app_user_id; // should be Supabase user ID
-    const productId = event?.event?.product_id || '';
+    const appUserId = event?.event?.app_user_id;
+    const productId = String(event?.event?.product_id || '');
 
-    if (!appUserId) return res.status(400).json({ error: 'Missing app_user_id' });
+    if (!appUserId || typeof appUserId !== 'string') {
+      return res.status(400).json({ error: 'Invalid payload' });
+    }
 
-    // Map product IDs to plan names (adjust to match your RevenueCat product IDs)
+    // Validate appUserId is a valid UUID (Supabase user ID format)
+    if (!UUID_RE.test(appUserId)) {
+      return res.status(400).json({ error: 'Invalid app_user_id format' });
+    }
+
     const isPro = productId.toLowerCase().includes('pro');
     const isBasic = productId.toLowerCase().includes('basic');
-
     let newPlan = null;
 
     switch (eventType) {
@@ -53,7 +78,7 @@ router.post('/webhook', async (req, res, next) => {
         break;
       case 'CANCELLATION':
       case 'EXPIRATION':
-        newPlan = 'trial'; // revert to trial on cancel/expire
+        newPlan = 'trial';
         break;
       default:
         return res.json({ received: true });

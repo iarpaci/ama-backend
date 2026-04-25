@@ -8,22 +8,36 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const ALLOWED_LANGUAGES = ['en', 'tr'];
+
 // POST /auth/register
 router.post('/register', async (req, res, next) => {
   try {
     const { email, password, language = 'en' } = req.body;
-    if (!email || !password) {
-      return res.status(400).json({ error: 'email and password required' });
+
+    if (!email || typeof email !== 'string' || !EMAIL_RE.test(email.trim())) {
+      return res.status(400).json({ error: 'Valid email is required' });
     }
+    if (!password || typeof password !== 'string' || password.length < 8) {
+      return res.status(400).json({ error: 'Password must be at least 8 characters' });
+    }
+    const lang = ALLOWED_LANGUAGES.includes(language) ? language : 'en';
 
     const { data, error } = await supabase.auth.admin.createUser({
-      email,
+      email: email.trim().toLowerCase(),
       password,
       email_confirm: true,
-      user_metadata: { language },
+      user_metadata: { language: lang },
     });
 
-    if (error) return res.status(400).json({ error: error.message });
+    if (error) {
+      // Don't reveal whether email already exists
+      if (error.message.toLowerCase().includes('already')) {
+        return res.status(400).json({ error: 'Registration failed. Please try again.' });
+      }
+      return res.status(400).json({ error: 'Registration failed. Please try again.' });
+    }
 
     res.status(201).json({ user_id: data.user.id, email: data.user.email });
   } catch (err) {
@@ -35,12 +49,21 @@ router.post('/register', async (req, res, next) => {
 router.post('/login', async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    if (!email || !password) {
+
+    if (!email || typeof email !== 'string') {
+      return res.status(400).json({ error: 'email and password required' });
+    }
+    if (!password || typeof password !== 'string') {
       return res.status(400).json({ error: 'email and password required' });
     }
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) return res.status(401).json({ error: error.message });
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email.trim().toLowerCase(),
+      password,
+    });
+
+    // Always return same message for invalid credentials (prevent user enumeration)
+    if (error) return res.status(401).json({ error: 'Invalid email or password' });
 
     res.json({
       access_token: data.session.access_token,
@@ -61,10 +84,12 @@ router.post('/login', async (req, res, next) => {
 router.post('/refresh', async (req, res, next) => {
   try {
     const { refresh_token } = req.body;
-    if (!refresh_token) return res.status(400).json({ error: 'refresh_token required' });
+    if (!refresh_token || typeof refresh_token !== 'string') {
+      return res.status(400).json({ error: 'refresh_token required' });
+    }
 
     const { data, error } = await supabase.auth.refreshSession({ refresh_token });
-    if (error) return res.status(401).json({ error: error.message });
+    if (error) return res.status(401).json({ error: 'Invalid or expired refresh token' });
 
     res.json({
       access_token: data.session.access_token,

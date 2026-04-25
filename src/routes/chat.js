@@ -8,6 +8,7 @@ const { supabase } = require('../middleware/auth');
 const router = express.Router();
 
 const VALID_MODES = ['revision', 'interpretation', 'technical', 'peer_review', 'citation', 'translation'];
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 // POST /chat/message
 router.post('/message', requireAuth, requireSubscription, async (req, res, next) => {
@@ -21,15 +22,16 @@ router.post('/message', requireAuth, requireSubscription, async (req, res, next)
       return res.status(400).json({ error: 'Message too long (max 20,000 characters)' });
     }
 
+    // Validate conversation_id is a proper UUID to prevent injection
+    const safeConvId = conversation_id && UUID_RE.test(conversation_id) ? conversation_id : null;
     const forcedMode = mode && VALID_MODES.includes(mode) ? mode : null;
 
-    // Fetch conversation history (last 10 turns) if conversation_id provided
     let conversationHistory = [];
-    if (conversation_id) {
+    if (safeConvId) {
       const { data } = await supabase
         .from('messages')
         .select('role, content')
-        .eq('conversation_id', conversation_id)
+        .eq('conversation_id', safeConvId)
         .eq('user_id', req.user.id)
         .order('created_at', { ascending: true })
         .limit(20);
@@ -42,8 +44,7 @@ router.post('/message', requireAuth, requireSubscription, async (req, res, next)
       forcedMode,
     });
 
-    // Persist messages
-    const convId = conversation_id || uuidv4();
+    const convId = safeConvId || uuidv4();
     await supabase.from('messages').insert([
       { conversation_id: convId, user_id: req.user.id, role: 'user', content: message.trim() },
       { conversation_id: convId, user_id: req.user.id, role: 'assistant', content: result.message },
@@ -98,6 +99,9 @@ router.get('/conversations', requireAuth, async (req, res, next) => {
 // GET /chat/conversations/:id
 router.get('/conversations/:id', requireAuth, async (req, res, next) => {
   try {
+    if (!UUID_RE.test(req.params.id)) {
+      return res.status(400).json({ error: 'Invalid conversation id' });
+    }
     const { data, error } = await supabase
       .from('messages')
       .select('role, content, created_at')
