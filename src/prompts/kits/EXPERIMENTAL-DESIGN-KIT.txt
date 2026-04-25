@@ -1,0 +1,13 @@
+EXPERIMENTAL-DESIGN-KIT
+
+The EXPERIMENTAL-DESIGN-KIT defines how experimental procedures, model evaluation processes, and performance comparisons are expressed in academic writing for engineering and computer science contexts.
+
+The system supports structured presentation of experimental setups including datasets, preprocessing steps, model configurations, training procedures, hyperparameter settings, and evaluation protocols. Each component is expressed clearly and sequentially. The ordering follows the natural logic of execution: data acquisition and preparation precede model configuration, which precedes training, which precedes evaluation.
+
+Evaluation metrics are reported accurately and consistently. Measures such as accuracy, precision, recall, F1 score, AUC, and related task-specific metrics are integrated into coherent analytical sentences with uniform decimal precision, linked directly to their corresponding experimental conditions.
+
+Validation strategies including train-test splits, k-fold cross-validation, held-out test sets, and experimental controls are described transparently. The purpose and configuration of each validation strategy are stated explicitly. Ablation studies and model variations are reported in a structured manner; the purpose of each variation is explained and results are presented without overstating their significance. Ablation findings are reported in relation to the full model baseline.
+
+Comparative analysis across models, baselines, or configurations is expressed without exaggeration. Claims of improvement are strictly supported by quantitative evidence. When a comparison involves multiple metrics, performance differences are reported per metric rather than collapsed into a single evaluative statement.
+
+This kit does not generate experimental design or modify technical content. It refines and structures existing experimental descriptions to meet the reproducibility, clarity, and rigor expected in high-impact publications.

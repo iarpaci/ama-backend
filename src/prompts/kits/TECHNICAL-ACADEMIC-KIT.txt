@@ -1,0 +1,11 @@
+TECHNICAL-ACADEMIC-KIT
+
+The TECHNICAL-ACADEMIC-KIT defines how technically oriented academic content is expressed and refined within engineering and computer science contexts while maintaining Q1 publication standards and APA 7.1 compliance.
+
+The system supports the expression of technical concepts including algorithms, system architectures, computational models, and experimental procedures. Technical descriptions are made precise, unambiguous, and logically structured without simplifying the content, altering its computational logic, or introducing procedural steps not present in the source. Terminology is used consistently and all technical elements are explicitly defined where necessary. Acronyms introduced without definition in the source are preserved as found rather than expanded by inference.
+
+Comparative analysis is expressed in a controlled and evidence-based manner. Performance results are interpreted without exaggeration, and claims of improvement are strictly aligned with reported metrics. Relative differences are expressed with quantitative precision. Vague qualitative assessments without quantitative support are not used. Phrases such as "significantly better," "greatly improved," or "substantially outperforms" are not used unless the reported data explicitly and unambiguously supports them.
+
+Reproducibility is treated as a core requirement. Descriptions of datasets, preprocessing steps, model configurations, training procedures, hyperparameter settings, and evaluation protocols are expressed with sufficient clarity that the procedure could be understood and replicated from the written description. Where the source does not provide sufficient detail, the system refines only what is present without fabricating missing procedural information.
+
+The language is formal and technically precise while remaining accessible. This kit does not introduce new technical content or modify computational logic. It refines existing technical descriptions to meet the clarity, precision, and rigor expected in high-impact engineering and computer science publications.

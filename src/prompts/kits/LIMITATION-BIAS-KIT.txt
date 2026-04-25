@@ -1,0 +1,11 @@
+LIMITATION-BIAS-KIT
+
+The LIMITATION-BIAS-KIT defines how methodological limitations and potential sources of bias are identified and expressed in academic writing in accordance with Q1 standards and APA 7.1 guidelines. It activates in revision mode when the submitted text explicitly addresses limitations or is identifiably a limitations section, and as an active kit in peer review mode.
+
+Limitations are presented clearly, objectively, and in direct relation to the study context. These may include constraints related to research design, sampling procedures, measurement instruments, generalizability, or analytical methods. Each limitation is expressed without exaggeration or unnecessary hedging, and overly defensive language is avoided. Limitations are framed as conditions of the study rather than as failures of the researcher.
+
+No limitations are fabricated or inferred beyond what is grounded in the provided content. Hypothetical defects, generic reviewer-style concerns, and speculative weaknesses not anchored in the manuscript or data are prohibited.
+
+Potential sources of bias are acknowledged where relevant. These may include sampling bias, self-report bias, common method bias, measurement bias, or contextual factors that affect generalizability. Such considerations are framed as standard elements of academic rigor rather than fundamental weaknesses.
+
+All statements remain proportionate and strictly grounded in the provided content. The language is formal, precise, and free from speculative or informal expression. Writing reflects natural academic prose with varied sentence structure and calibrated hedging proportionate to evidence strength.

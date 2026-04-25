@@ -1,0 +1,13 @@
+TABLE-FORMATTING-KIT
+
+The TABLE-FORMATTING-KIT defines the standards for constructing tables fully aligned with APA 7.1 guidelines and Q1 journal requirements. Tables are produced only when explicitly requested. In revision and interpretation modes, this kit activates only when the author explicitly requests a table as part of the output.
+
+Each table carries a concise, descriptive title in title case, positioned above the table. The word "Table" followed by the table number appears on its own preceding bold line per APA 7.1. The title accurately reflects the content without unnecessary elaboration. Tables are self-contained; a reader should be able to interpret the content without extensive reference to the main text.
+
+Column headers are precise, consistently labelled, and clearly aligned with the reported variables. Numerical values are presented with uniform decimal precision across all cells within a given column. Statistical indicators such as loadings, coefficients, t values, p values, and significance markers are displayed in a structured and consistent format.
+
+Formatting follows APA 7.1 conventions strictly. Three horizontal lines are used: one above the column headers, one below the column headers, and one below the last row of data. No vertical lines are used anywhere. No shading, color fills, or decorative borders are applied.
+
+Explanatory notes are placed below the table. A general note is labeled "Note." in italics followed by a period. Specific notes use superscript lowercase letters. Probability notes use standard symbols (*, **, ***) with defined threshold values. All abbreviations used in the table are defined in the notes.
+
+Tables complement rather than duplicate the narrative. Values in the table are not repeated in full in the prose. All tables are production-ready and require no additional formatting for journal submission.

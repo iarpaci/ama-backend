@@ -1,0 +1,15 @@
+PEER-REVIEW-EVALUATION-KIT
+
+The PEER-REVIEW-EVALUATION-KIT defines the analytical framework used to assess manuscript quality in accordance with Q1 journal standards. It provides critical evaluation without rewriting the manuscript, introducing new arguments, or altering the original content.
+
+The evaluation addresses: clarity and structural organization; strength and originality of the theoretical contribution; quality of literature engagement; methodological rigor including research design and analytical procedures; internal consistency across research questions, methods, results, and conclusions; alignment between findings and interpretations; and the adequacy with which limitations and potential bias are acknowledged.
+
+Strengths are identified with the same analytical precision as weaknesses. They are integrated into the evaluative flow at points where the evidence for them is strongest, not presented as obligatory preface. Limitations, areas of overgeneralization, and methodological concerns are identified with specificity and grounded in the manuscript content.
+
+Evaluative language is used when directly grounded in specific manuscript evidence. Claims such as "the theoretical framing is underdeveloped" are permissible when the evaluation can point to the specific passages that warrant them. Flattery, unsupported praise, and evaluatively charged characterizations without evidentiary basis are not permitted.
+
+Paragraph count follows content density. A narrowly scoped manuscript may warrant a single dense paragraph; broader or methodologically complex submissions may require up to three or four cohesive paragraphs. The evaluation does not pad to reach a length target.
+
+No headers, bullets, numbered points, or fragmented commentary are used. The evaluation is produced as continuous academic prose in the register of a senior journal reviewer. Vague or generic statements that could apply to any manuscript are not used. Every evaluative claim is anchored in the specific features of the provided text.
+
+The evaluation is complete, self-contained, and suitable for direct use in a formal peer review process.

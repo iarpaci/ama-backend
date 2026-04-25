@@ -1,0 +1,45 @@
+STATISTICAL-THRESHOLDS-KIT
+
+The STATISTICAL-THRESHOLDS-KIT defines the reporting thresholds, interpretive benchmarks, and evaluative conventions used when interpreting SPSS, AMOS, and PLS-SEM outputs. It takes precedence over the STATISTICAL-OUTPUT-KIT in all matters of numerical threshold and benchmark interpretation.
+
+These benchmarks apply by default. When the author explicitly specifies alternative thresholds, cites field-specific conventions, or references journal submission requirements that differ from these defaults, those specifications take precedence and are applied as stated. The system does not deviate from threshold application on the basis of implicit preference or contextual pressure; deviation requires explicit author instruction.
+
+When a value falls at or near a threshold boundary, the interpretation acknowledges the proximity without inflating or deflating the conclusion. Marginal values are reported as marginal. Values meeting criteria are reported as meeting them without superlatives. Threshold values are not repeated in prose when presented in a table. The system does not invent thresholds not covered in this kit; metrics not defined here are interpreted descriptively without inventing a benchmark.
+
+SPSS
+
+Reliability: Cronbach's alpha and McDonald's omega — acceptable ≥ .70, good .80–.89, excellent ≥ .90. Values below .70 are reported as falling below the accepted threshold without characterizing the scale as unusable unless the author has drawn that conclusion.
+
+Exploratory Factor Analysis: Loadings ≥ .40 are meaningful; .40–.49 modest, ≥ .50 moderate to strong. Cross-loadings within .10 of a primary loading are flagged as potentially problematic. Eigenvalue retention criterion: greater than 1.0 under Kaiser's rule unless the author specifies otherwise. Cumulative explained variance: acceptable ≥ 50%, good ≥ 60%.
+
+Correlation: Pearson r — negligible < .10, small .10–.29, moderate .30–.49, large .50–.69, very large ≥ .70. Multicollinearity flagged when r > .85 between predictors in regression contexts.
+
+Regression: R-squared — small .02, medium .13, large .26. VIF — flag > 5.0, severe > 10.0. Tolerance < .20 flagged correspondingly.
+
+Significance: p < .05 is the primary threshold. p < .01 and p < .001 indicate progressively stronger evidence. p values between .05 and .10 are not described as significant; they may be noted as a trend only when the author has explicitly framed them as such.
+
+AMOS
+
+Chi-square: Not used as a standalone fit criterion. χ²/df — excellent < 2.0, good 2.0–3.0, acceptable 3.0–5.0, poor > 5.0. Chi-square p-value is reported but not used as the primary fit criterion.
+
+CFI and TLI: Good ≥ .95, acceptable .90–.94, inadequate < .90. When CFI and TLI diverge by more than .05, note the discrepancy.
+
+RMSEA: Close fit ≤ .05, acceptable .05–.08, marginal .08–.10, poor > .10. The 90% confidence interval is reported when available; the upper bound must remain below .10 for a confident close-fit interpretation.
+
+SRMR: Good < .05, acceptable ≤ .08.
+
+Convergent Validity: AVE ≥ .50 demonstrates convergent validity. AVE .40–.49 may be accepted when CR > .60, consistent with Fornell and Larcker's original specification; this condition is stated explicitly when applied. Standardized loadings < .50 are flagged in CFA.
+
+Discriminant Validity: Fornell-Larcker criterion requires the square root of each construct's AVE to exceed its correlations with all other constructs; each comparison is assessed individually. HTMT is the primary discriminant validity criterion when reported: strong evidence < .85, acceptable for theoretically related constructs .85–.90, concern > .90.
+
+Composite Reliability: Acceptable ≥ .70, good ≥ .80. Values > .95 may indicate item redundancy.
+
+Multi-group Invariance: Configural invariance requires acceptable fit with the same factor structure across groups. Metric invariance is assessed via ΔCFI ≤ .010. Scalar invariance requires additionally that item intercepts are invariant. Partial invariance, where at least two items per factor are invariant, is sufficient for meaningful latent mean comparisons.
+
+PLS-SEM
+
+Outer Loadings: Strong ≥ .70. May retain .40–.69 when AVE and CR thresholds are still met at the construct level; this condition is stated explicitly. Loadings < .40 are candidates for removal. Squared outer loading ≥ .50 indicates the indicator shares more variance with the construct than with error.
+
+AVE and CR: AVE ≥ .50 and CR ≥ .70 for acceptable convergent validity. CR > .95 may indicate item redundancy. HTMT thresholds as defined above.
+
+Structural Model: f-squared — small .02, medium .15, large .35. R-squared — weak ≤ .19, moderate .33, substantial .67. Q-squared > 0 indicates predictive relevance for the endogenous construct. Bootstrap t-values — p < .05 at t > 1.96, p < .01 at t > 2.58, p < .001 at t > 3.29, two-tailed. Confidence intervals not including zero indicate significance at the corresponding level.

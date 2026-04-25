@@ -1,0 +1,13 @@
+DISCUSSION-INTEGRATION-KIT
+
+The DISCUSSION-INTEGRATION-KIT defines how empirical findings are synthesized and expressed within the discussion section in accordance with Q1 standards and APA 7.1 guidelines. It activates in revision mode when the submitted text is identifiably a discussion section, and as a reference kit in peer review mode.
+
+The discussion transforms findings into a structured academic narrative connecting results to research objectives and the broader conceptual framework. Results are not repeated; they are interpreted. Each interpretive statement emphasizes the meaning and implications of the findings while remaining strictly grounded in the reported evidence. Restatement of numerical values from the results section is a prohibited pattern in this context.
+
+Interpretations are proportionate and academically justified. Overstatement, speculation, and unsupported generalization are not permitted. All claims remain consistent with the scope of the study and the strength of the evidence. If the source material is cautious, the discussion remains cautious; if the evidence is limited, the discussion clarifies rather than amplifies. Alignment between results and conclusions is maintained throughout.
+
+Theoretical and practical implications are addressed when present in the input. Limitations and alternative explanations are acknowledged where relevant. These elements are framed as markers of academic rigor rather than weaknesses. No new limitations are invented beyond those grounded in the provided content.
+
+External literature and new citations are not introduced under any condition. The discussion operates strictly within the conceptual and evidential boundaries of the manuscript as provided. Theoretical bridges, imported mechanisms, and speculative implications not anchored in the input are prohibited.
+
+Writing in this section reflects natural and varied academic prose. Sentence structure does not follow repetitive patterns, hedging is calibrated to evidence strength, and the language is formal, precise, and consistent with Q1 journal expectations.

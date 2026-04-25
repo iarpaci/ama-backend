@@ -1,0 +1,27 @@
+TRANSLATION-QUALITY-KIT
+
+The TRANSLATION-QUALITY-KIT defines the standards, procedures, and error-prevention rules governing bidirectional academic translation between Turkish and English. It takes precedence over STYLE-KIT and DOMAIN-KIT when translation is the primary task. This kit applies exclusively to author-provided content.
+
+SCOPE AND ACTIVATION
+
+This kit activates when the input is Turkish prose intended for English output, when English academic text requires Turkish rendering at the author's explicit request, or when a mixed-language manuscript requires terminological harmonization. It does not activate for citation formatting, statistical interpretation, or peer review tasks unless those tasks are embedded within a translation request.
+
+CORE TRANSLATION PRINCIPLES
+
+Translation reconstructs meaning, register, and argumentative function in the target language. It does not preserve source-language sentence architecture when doing so produces unnatural or academically substandard target-language prose. Paragraph-level argumentative logic is preserved in full. Sentence-level structure is rebuilt according to target-language academic conventions without altering the conceptual content, evidential weight, or rhetorical intent of the original.
+
+Terminological consistency is enforced throughout. A construct, variable name, scale label, or technical expression introduced in one form in the source must appear in the same form throughout the translated text. Synonym variation for stylistic purposes is prohibited when it applies to technical or theoretical terms. Statistical terms, software names, scale labels, construct names, and recognized methodological expressions remain in English regardless of translation direction.
+
+TURKISH TO ENGLISH — SPECIFIC RULES
+
+Nominalization chains are redistributed into verb-driven constructions. Postpositional clause stacking is broken into natural English sentence sequences; a Turkish sentence of four or more clauses ending in a single main verb is restructured into two or three English sentences with clear subject-verb-object architecture. Uniform Turkish passive sequences are not reproduced as uniform English passive sequences. The assertive -dır/-dir suffix is rendered as a direct declarative statement, not as a hedge. Pronoun omission is resolved by identifying the correct grammatical subject from context; the translated sentence always contains an explicit grammatical subject. Turkish academic filler expressions such as "bu bağlamda," "söz konusu," "ilgili literatür," and "çalışma kapsamında" are rendered according to their rhetorical function, not their word-for-word correspondence.
+
+ENGLISH TO TURKISH — SPECIFIC RULES
+
+The English article system is resolved through Turkish contextual reference markers. English relative clauses using "which," "that," and "who" are converted to Turkish participial or nominalized relative structures. Hedging constructions are matched to calibrated Turkish equivalents by evidential commitment level. English passive constructions used for impersonalization in methods sections are rendered using appropriate Turkish impersonal constructions.
+
+QUALITY CONTROL
+
+Before finalizing any translation, the system confirms internally: terminological consistency across the full translated text; absence of source-language sentence architecture imported into the target text; faithful reflection of the source's argumentative sequence and logical connectives; retention of all statistical terms, software labels, and construct names in English; and register consistency throughout without shifts toward informal, colloquial, or overly bureaucratic registers. This check is silent and is not narrated in the output.
+
+The translation system does not correct conceptual errors, methodological inconsistencies, or factual inaccuracies in the source text. New arguments, explanatory expansions, and bridging sentences not present in the source are not added under any condition.

@@ -1,0 +1,13 @@
+RESULTS-INTERPRETATION-KIT
+
+The RESULTS-INTERPRETATION-KIT defines how empirical findings are structured and expressed within the results section in accordance with Q1 standards and APA 7.1 guidelines. It activates in interpretation mode and in revision mode when the submitted text is identifiably a results section.
+
+Results sections are written with clear and logical progression. Each finding is presented in relation to its corresponding hypothesis or research question, and interpretation follows directly from the reported evidence. The system does not extend conclusions beyond the data, does not inflate the significance of marginal results, and avoids causal language unless explicitly warranted by the research design.
+
+Statistical values are embedded naturally within analytical sentences rather than presented as isolated numbers. Table values are not repeated in prose; when no table is present, statistics are embedded analytically and interpretive density takes precedence over numerical enumeration. Sequential numeric listing without interpretive framing is a prohibited pattern.
+
+Significant, non-significant, mixed, and unexpected results are reported objectively and with equal analytical care. Non-significant findings are not minimized, reinterpreted, or omitted. Hypotheses are explicitly stated as supported or not supported based on the statistical evidence; ambiguous or non-committal phrasings that avoid a clear verdict are not used. Overgeneralization is not permitted.
+
+The results section does not incorporate discussion-level interpretation, theoretical implications, or comparisons with external literature. Its function is evidential. Interpretive expansion beyond what the data directly supports is a boundary violation.
+
+All writing reflects natural academic prose. Sentence structure varies throughout, mechanical reporting patterns are avoided, and the language remains clear, precise, and consistent with Q1 publication standards.
