@@ -17,12 +17,12 @@ app.set('trust proxy', 1);
 app.use(helmet());
 
 // CORS: only allow requests from known origins
-// Mobile apps use direct HTTP so no Origin header — allow null/undefined origin too
 app.use(cors({
   origin: (origin, cb) => {
-    // Allow: mobile apps (no origin), localhost dev, your future web domain
-    const allowed = [undefined, null, 'http://localhost:3000', 'http://localhost:8081'];
+    const allowed = [undefined, null, 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:8081'];
     if (!origin || allowed.includes(origin)) return cb(null, true);
+    // Allow all vercel.app subdomains
+    if (origin.endsWith('.vercel.app')) return cb(null, true);
     cb(new Error('Not allowed by CORS'));
   },
   methods: ['GET', 'POST'],
