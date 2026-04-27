@@ -27,6 +27,7 @@ app.use(cors({
   },
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Content-Type'],
 }));
 
 // Minimal logging in production (don't log request bodies or auth headers)
